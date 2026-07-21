@@ -1,0 +1,171 @@
+﻿<Window x:Class="CaseInvestmentTracker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CS2 Case Investment Tracker"
+        Height="720"
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#1B2838">
+
+    <Grid Margin="15">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Header -->
+        <Border Grid.ColumnSpan="2"
+                Background="#171A21"
+                CornerRadius="8"
+                Margin="0,0,0,10">
+
+            <Grid>
+
+                <TextBlock Text="CS2 Case Investment Tracker"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           VerticalAlignment="Center"
+                           Margin="20,0"/>
+
+                <TextBox Width="250"
+                         Height="35"
+                         HorizontalAlignment="Right"
+                         Margin="0,0,20,0"
+                         VerticalAlignment="Center"
+                         FontSize="16"
+                         Text="Search Case..."/>
+
+            </Grid>
+
+        </Border>
+
+        <!-- Portfolio -->
+        <Border Grid.Row="1"
+                Background="#2A475E"
+                CornerRadius="8"
+                Margin="0,0,10,0">
+
+            <DataGrid
+                AutoGenerateColumns="False"
+                Background="#2A475E"
+                Foreground="White"
+                HeadersVisibility="Column"
+                BorderThickness="0">
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="Case"
+                                        Binding="{Binding Name}"
+                                        Width="220"/>
+
+                    <DataGridTextColumn Header="Buy Price"
+                                        Binding="{Binding BuyPrice}"
+                                        Width="100"/>
+
+                    <DataGridTextColumn Header="Current"
+                                        Binding="{Binding CurrentPrice}"
+                                        Width="100"/>
+
+                    <DataGridTextColumn Header="Quantity"
+                                        Binding="{Binding Quantity}"
+                                        Width="80"/>
+
+                    <DataGridTextColumn Header="Profit"
+                                        Binding="{Binding Profit}"
+                                        Width="100"/>
+
+                    <DataGridTextColumn Header="ROI %"
+                                        Binding="{Binding ProfitPercent}"
+                                        Width="80"/>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+        </Border>
+
+        <!-- Stats -->
+        <StackPanel Grid.Row="1"
+                    Grid.Column="1">
+
+            <Border Background="#2A475E"
+                    CornerRadius="8"
+                    Padding="15"
+                    Margin="0,0,0,10">
+
+                <StackPanel>
+
+                    <TextBlock Text="Portfolio"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <Separator Margin="0,10"/>
+
+                    <TextBlock Text="Invested:"
+                               Foreground="White"/>
+
+                    <TextBlock Text="$0.00"
+                               FontSize="22"
+                               Foreground="#66C0F4"/>
+
+                    <TextBlock Margin="0,10,0,0"
+                               Text="Current Value:"
+                               Foreground="White"/>
+
+                    <TextBlock Text="$0.00"
+                               FontSize="22"
+                               Foreground="#66C0F4"/>
+
+                    <TextBlock Margin="0,10,0,0"
+                               Text="Profit:"
+                               Foreground="White"/>
+
+                    <TextBlock Text="$0.00"
+                               FontSize="22"
+                               Foreground="LimeGreen"/>
+
+                    <TextBlock Margin="0,10,0,0"
+                               Text="ROI:"
+                               Foreground="White"/>
+
+                    <TextBlock Text="0%"
+                               FontSize="22"
+                               Foreground="Orange"/>
+
+                </StackPanel>
+
+            </Border>
+
+            <Button Content="Refresh Prices"
+                    Height="45"
+                    FontSize="16"
+                    Background="#66C0F4"
+                    Foreground="Black"/>
+
+            <Button Content="Add Investment"
+                    Margin="0,10,0,0"
+                    Height="45"
+                    FontSize="16"
+                    Background="#5C7E10"
+                    Foreground="White"/>
+
+            <Button Content="Export CSV"
+                    Margin="0,10,0,0"
+                    Height="45"
+                    FontSize="16"
+                    Background="#3C3F41"
+                    Foreground="White"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>
