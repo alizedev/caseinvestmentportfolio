@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<changelog>
+
+    <release version="1.0.0" date="2026-07-21">
+
+        <title>
+            CS2 Case Investment Tracker Initial Release
+        </title>
+
+
+        <added>
+
+            <item>
+                Steam inspired WPF interface
+            </item>
+
+            <item>
+                CS2 Case portfolio management
+            </item>
+
+            <item>
+                Investment tracking
+            </item>
+
+            <item>
+                ROI and profit calculation
+            </item>
+
+            <item>
+                Steam Market price lookup
+            </item>
+
+            <item>
+                Price history system
+            </item>
+
+            <item>
+                MVVM architecture
+            </item>
+
+        </added>
+
+
+        <planned>
+
+            <item>
+                SQLite database support
+            </item>
+
+            <item>
+                LiveCharts price graphs
+            </item>
+
+            <item>
+                Steam Inventory Import
+            </item>
+
+            <item>
+                CSFloat integration
+            </item>
+
+        </planned>
+
+
+        <fixed>
+
+            <item>
+                Initial bugs
+            </item>
+
+        </fixed>
+
+    </release>
+
+
+</changelog>
