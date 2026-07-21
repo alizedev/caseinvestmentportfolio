@@ -44,19 +44,19 @@ Example:
 
 ```
 Case:
-Gamma 2 Case
+Revolution Case
 
 Bought:
-200x @ 0.18€
+2900x @ 0.18€
 
 Current:
-200x @ 2.14€
+2900 @ 0.40€
 
 Profit:
-+392.00€
++1.160 €
 
 ROI:
-1088%
++25%
 ```
 
 ---
